@@ -12,21 +12,8 @@ export class PostsController {
       return this.postsService.findAll();
     }
 
-
     @Post()
     create(@Body() PostsDto: PostsDto) {
-
-        // return  this.postsService.addPosts(Posts);
-        return  PostsDto;
+        return  this.postsService.create(PostsDto);
     }
-    // @Post()
-    // create(): Promise<Posts[]> {
-    //   return this.;
-    // }
-
-
-    // @Get(':name')
-    // getProductByName(@Param() params: any): Promise {
-    //   return this.productService.findByName(params.name);
-    // }
 }
