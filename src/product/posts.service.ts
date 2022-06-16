@@ -8,10 +8,7 @@ export class PostsService {
   constructor(
     @InjectRepository(Posts)
     private readonly postsRepository: Repository<Posts>) {
-        const pr1 = new Posts();
-        pr1.description = 'First Product';
-        pr1.name = 'product1';
-        this.postsRepository.save(pr1);
+        
     }
 
   async findAll(): Promise<Posts[]> {

@@ -1,4 +1,4 @@
-import { Get, Controller, Param } from '@nestjs/common';
+import { Get, Post, Controller, Param } from '@nestjs/common';
 import { PostsService } from './posts.service';
 import { Posts } from './posts.entity';
 
@@ -10,6 +10,12 @@ export class PostsController {
     getPosts(): Promise<Posts[]> {
       return this.postsService.findAll();
     }
+
+    // @Post()
+    // create(): Promise<Posts[]> {
+    //   return this.;
+    // }
+
 
     // @Get(':name')
     // getProductByName(@Param() params: any): Promise {

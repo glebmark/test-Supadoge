@@ -3,12 +3,6 @@ import { AppController } from './app.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PostsModule } from './product/posts.module';
 
-// @Module({
-//   imports: [],
-//   controllers: [AppController],
-//   providers: [],
-// })
-// export class ApplicationModule {}
 
 @Module({
     imports: [TypeOrmModule.forRoot({
