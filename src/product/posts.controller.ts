@@ -1,6 +1,7 @@
-import { Get, Post, Controller, Param } from '@nestjs/common';
+import { Get, Post, Controller, Param, Body } from '@nestjs/common';
 import { PostsService } from './posts.service';
 import { Posts } from './posts.entity';
+import { PostsDto } from './interfaces/posts.dto';
 
 @Controller('posts')
 export class PostsController {
@@ -11,6 +12,13 @@ export class PostsController {
       return this.postsService.findAll();
     }
 
+
+    @Post()
+    create(@Body() PostsDto: PostsDto) {
+
+        // return  this.postsService.addPosts(Posts);
+        return  PostsDto;
+    }
     // @Post()
     // create(): Promise<Posts[]> {
     //   return this.;
